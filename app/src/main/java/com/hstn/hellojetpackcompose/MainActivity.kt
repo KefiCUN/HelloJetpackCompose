@@ -19,10 +19,22 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Text(
-                text = "Hello My phone!",
-                fontSize = 28.sp
-            )
+            HelloText()
         }
     }
+}
+
+
+@Composable
+fun HelloText() {
+    Text(
+        text = "Hello My phone!",
+        fontSize = 28.sp
+    )
+}
+
+@Preview(showSystemUi = true)
+@Composable
+fun HelloTextPrewiew() {
+    HelloText()
 }
